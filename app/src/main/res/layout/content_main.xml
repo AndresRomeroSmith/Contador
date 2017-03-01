@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.andresromero.contador.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:text="Contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:id="@+id/contadorPulsaciones" />
+
+    <Button
+        android:text="Resetear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/resetear"
+        android:elevation="0dp"
+        android:onClick="resetCont"
+        />
+
+    <Button
+        android:text="Suma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/suma"
+        android:layout_above="@+id/resetear"
+        android:layout_alignStart="@+id/resetear"
+        android:onClick="sumaCont"
+        />
+
+    <Button
+        android:text="Resta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resta"
+        android:layout_below="@+id/resetear"
+        android:layout_alignStart="@+id/resetear"
+        android:onClick="restaCont"
+        />
+
+    <CheckBox
+        android:text="Conteo Negativo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/resta"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/conteoN" />
+
+</RelativeLayout>
